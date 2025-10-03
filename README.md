@@ -26,7 +26,6 @@ Future releases will support additional notebook environments, object stores and
 |                                           |* Uses Google Drive as Object Store                                |
 |                                           |* Requires Colab env setup for Google Drive                        |
 |                                           |* Development has stopped for this version                         |
-|-------------------------------------------|-------------------------------------------------------------------|
 |CDISC_360i_Object_Store_Automation         |* Does not copy study artifacts to local filesystem, but works entirely with objects in Object Store    |
 |                                           |* Uses Google Drive as Object Store                                |
 |                                           |* Requires Colab env setup for Google Drive                        |
@@ -47,6 +46,25 @@ Future releases will support additional notebook environments, object stores and
 4. Copy the CDISC_360i_Protocol_to_Submission notebook to the myDrive/Colab Notebooks dirctory:
 
     ![MyDrive/Colab Notebooks directory structure](images/ColabNotebooks.png)
+
+5. A custom distribution of the CDISC CORE Rules Engine will be required for execution of CORE Validation Rules in the notebooks.  This distribution will need to be built for the system hosting the notebooks.  Instructions are available here:
+
+    https://github.com/cdisc-org/cdisc-rules-engine/blob/main/README_Build_Executable.md
+
+    The custom distribution used in the notebooks is too large for GitHub.
+
+    Ensure the new distribution is archived as core.tar.gz and stored as shown in the image above.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
