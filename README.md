@@ -26,7 +26,10 @@ Future releases will support additional notebook environments, object stores and
 |                                           |* Uses Google Drive as Object Store                                |
 |                                           |* Requires Colab env setup for Google Drive                        |
 |                                           |* Development has stopped for this version                         |
+<<<<<<< HEAD
 |-------------------------------------------|-------------------------------------------------------------------|
+=======
+>>>>>>> d92dccb8aa408783279b32c76ad7ec74a3ce5d8e
 |CDISC_360i_Object_Store_Automation         |* Does not copy study artifacts to local filesystem, but works entirely with objects in Object Store    |
 |                                           |* Uses Google Drive as Object Store                                |
 |                                           |* Requires Colab env setup for Google Drive                        |
@@ -37,6 +40,7 @@ Future releases will support additional notebook environments, object stores and
 
 1. Clone the repository or download a notebook
 2. Access [Google Colaboratory](https://colab.google.com/) using your Google account.
+<<<<<<< HEAD
 3. Setup MyDrive to match URL requirements of notebook.  The directory structure in GooGle Drive should appear as:
 
 
@@ -47,6 +51,14 @@ Future releases will support additional notebook environments, object stores and
 4. Copy the CDISC_360i_Protocol_to_Submission notebook to the myDrive/Colab Notebooks dirctory:
 
     ![MyDrive/Colab Notebooks directory structure](images/ColabNotebooks.png)
+=======
+3. Setup MyDrive to match URL requirements of notebook.
+
+
+
+
+
+>>>>>>> d92dccb8aa408783279b32c76ad7ec74a3ce5d8e
 
 
 
@@ -64,4 +76,8 @@ Future releases will support additional notebook environments, object stores and
 |Trial Design Dataset creation      |https://github.com/pendingintent/cdisc-usdm-utils                                          |
 |Define-XML template creation       |https://github.com/dostiep/360i                                                            |
 |Define-XML creation                |https://github.com/swhume/template2define                                                  |
+<<<<<<< HEAD
 |Raw subject data                   |https://github.com/alidootson/UpdatedCDISCPilotData/tree/main/UpdatedCDISCPilotData/CDASH  |
+=======
+|Raw subject data                   |https://github.com/alidootson/UpdatedCDISCPilotData/tree/main/UpdatedCDISCPilotData/CDASH  |
+>>>>>>> d92dccb8aa408783279b32c76ad7ec74a3ce5d8e

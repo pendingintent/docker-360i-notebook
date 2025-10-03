@@ -3,5 +3,9 @@ venv/
 .env
 output/
 output_from_main/
+<<<<<<< HEAD
 tmp*/
 core.tar.gz
+=======
+tmp*/
+>>>>>>> d92dccb8aa408783279b32c76ad7ec74a3ce5d8e
