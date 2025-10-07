@@ -3,22 +3,54 @@ services:
     container_name: clinical-database
     build:
       context: ./scripts
+      dockerfile: Dockerfile-postgres
     restart: unless-stopped
     shm_size: 128mb
     env_file:
       - .env
     ports:
       - 5432:5432
+    networks:
+      - clinical-bridge
     volumes:
       - db:/var/lib/postgresql/18/data
 
+  jupyter:
+    container_name: clinical-notebook
+    depends_on:
+      - postgres
+    build:
+      context: ./scripts
+      dockerfile: Dockerfile-jupyter
+    platform: "linux/amd64"
+    ports:
+      - "8888:8888"
+    networks:
+      - clinical-bridge
+    volumes:
+      - ./notebooks:/workspace/notebooks
+    restart: unless-stopped
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
 
   adminer:
     image: adminer
+    depends_on:
+      - postgres
     restart: unless-stopped
     ports:
       - 8080:8080
+    networks:
+      - clinical-bridge
 
 
 volumes:
   db:
+
+networks:
+  clinical-bridge:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: "10.0.0.0/28"
+          gateway: "10.0.0.1"

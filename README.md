@@ -44,7 +44,10 @@ The raw clinical data now exists in the PostgreSQL database.
 
 
 
-
+To start the notebook environment:
+```
+source initial-startup.sh
+```
 
 
 

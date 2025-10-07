@@ -13,5 +13,5 @@ docker-compose up -d --force-recreate --build
 
 To start an interactive session with the new container 'clinical-database':
 ```
-docker exec -it clinical-database /bin/sh
+docker exec -it clinical-database /bin/bash
 ```

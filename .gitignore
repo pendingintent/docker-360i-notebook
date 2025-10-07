@@ -4,3 +4,11 @@ venv/
 output/
 output_from_main/
 tmp*/
+working_dir/*
+.ipynb_checkpoints
+.Trash-0
+data
+crf
+output
+notebooks/cdisc-*
+notebooks/cdisc360i-pocs
