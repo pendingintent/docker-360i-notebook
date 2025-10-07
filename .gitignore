@@ -10,5 +10,7 @@ working_dir/*
 data
 crf
 output
+reports
 notebooks/cdisc-*
 notebooks/cdisc360i-pocs
+notebooks/360i
