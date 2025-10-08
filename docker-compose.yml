@@ -11,7 +11,8 @@ services:
     ports:
       - 5432:5432
     networks:
-      - clinical-bridge
+      clinical-bridge:
+        ipv4_address: 10.0.0.2
     volumes:
       - db:/var/lib/postgresql/18/data
 
@@ -26,7 +27,8 @@ services:
     ports:
       - "8888:8888"
     networks:
-      - clinical-bridge
+      clinical-bridge:
+        ipv4_address: 10.0.0.4
     volumes:
       - ./notebooks:/workspace/notebooks
     restart: unless-stopped

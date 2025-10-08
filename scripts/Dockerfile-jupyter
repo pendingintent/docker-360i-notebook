@@ -19,7 +19,6 @@ COPY requirements.txt /tmp/requirements.txt
 RUN $VIRTUAL_ENV/bin/pip install -r /tmp/requirements.txt
 
 WORKDIR /workspace
-COPY Define-Template.json /tmp/Define-Template.json
 
 EXPOSE 8888
 

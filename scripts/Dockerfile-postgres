@@ -17,6 +17,8 @@ WORKDIR /UpdatedCDISCPilotData/UpdatedCDISCPilotData/CDASH/csv\ versions
 
 COPY db-import.py .
 
+EXPOSE 5432
+
 #ENTRYPOINT [ "/bin/bash" ]
 
 
