@@ -4,4 +4,22 @@ venv/
 output/
 output_from_main/
 tmp*/
-core.tar.gz
+working_dir/*
+#Jupyter directories sholud not be included in commit
+.ipynb_checkpoints
+.Trash-0
+# Local resources should not be included in commit
+data
+crf
+output
+reports
+protocol
+sdtm
+shell_datasets
+_from_sdtm_oak_codegen.csv
+notebooks/cdisc-*
+notebooks/cdisc360i-pocs
+notebooks/360i
+notebooks/template2define
+*_from_sdtm_oak_codegen.csv
+*.R
