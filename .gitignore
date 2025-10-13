@@ -4,7 +4,7 @@ venv/
 output/
 output_from_main/
 tmp*/
-working_dir/*
+working-dir
 #Jupyter directories sholud not be included in commit
 .ipynb_checkpoints
 .Trash-0
