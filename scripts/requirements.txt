@@ -12,7 +12,6 @@ saxonche
 click 
 xmlschema 
 dominate 
-pandas 
 pygame 
 ipywidgets
 openpyxl
