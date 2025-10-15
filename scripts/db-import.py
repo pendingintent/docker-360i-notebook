@@ -3,7 +3,7 @@ from sqlalchemy import create_engine
 import os
 
 # Database connection
-conn_string = 'postgresql://clinops:"changeme"@localhost/clinops'  
+conn_string = 'postgresql://clinops:changeme@postgres/clinops'  
 db = create_engine(conn_string)
 
 # the folder containing the CSV files
