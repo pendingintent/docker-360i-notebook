@@ -32,7 +32,7 @@ Currently, these notebooks are designed to execute in the [Google Colaboratory](
 
 |Notebook                                   |Notes
 |-------------------------------------------|-------------------------------------------------------------------|
-|CDISC_360i_Object_Store_Automation         |* Does not copy study artifacts to local filesystem, but works entirely with objectsin Object Store    |
+|CDISC_360i_Object_Store_Automation         |* Does not copy study artifacts to local filesystem, but works entirely with objects in Object Store    |
 |                                           |* Uses Google Drive as Object Store                                |
 |                                           |* Requires Colab env setup for Google Drive                        |
 |                                           |* Development will continue as new tools and features become available |
