@@ -18,6 +18,8 @@ COPY db-import.py .
 
 EXPOSE 5432
 
+# The following ENTRYPOINT is commented out to allow the default Postgres entrypoint.
+# Uncomment for debugging or to run an interactive shell instead.
 #ENTRYPOINT [ "/bin/bash" ]
 
 
