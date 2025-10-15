@@ -23,7 +23,7 @@ This environment exists as two Docker containers; one hosting a PostgreSQL relat
 4. Open a browser to http://localhost:8888
 5. In the notebooks directory, open the *CDISC_360i_Jupyter_Protocol_to_Submission.ipynb* notebook.
 
-All CDSIC utilities as well as the resources will be created in the notebooks directory in the *clinical-notebook* container.
+All CDISC utilities as well as the resources will be created in the notebooks directory in the *clinical-notebook* container.
 
 All tables will be created in the PostgreSQL database in the *clinical-database* container.
 
