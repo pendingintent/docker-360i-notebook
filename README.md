@@ -25,7 +25,7 @@ This environment exists as two Docker containers; one hosting a PostgreSQL relat
 
 All CDSIC utilities as well as the resources will be created in the notebooks directory in the *clinical-notebook* container.
 
-All tables will be created in the PostgreSQL database in the *linical-database* container.
+All tables will be created in the PostgreSQL database in the *clinical-database* container.
 
 ## Google Colab Notebooks
 Currently, these notebooks are designed to execute in the [Google Colaboratory](https://colab.google.com/) environment.
