@@ -7,7 +7,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 RUN git clone https://github.com/alidootson/UpdatedCDISCPilotData.git
 
-WORKDIR /UpdatedCDISCPilotData/UpdatedCDISCPilotData/CDASH/csv\ versions
+WORKDIR "/UpdatedCDISCPilotData/UpdatedCDISCPilotData/CDASH/csv versions"
 
 COPY db-import.py .
 
