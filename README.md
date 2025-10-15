@@ -50,6 +50,7 @@ Currently, these notebooks are designed to execute in the [Google Colaboratory](
 **Notes:**
 1. The notebook relies upon access to your Google Drive.
 2. If you would like to access the OpenStudyBuilder API, you must supply a BEARER_TOKEN.
+3. The *core.tar.gz* used in the notebook is a distribution of the CORE engine built for the Google Colab environment as of October 2025.  Google Colab environment future updates may require the creation of a new distribution of the CORE engine (links are included in the notebook).
 
 
 
