@@ -44,10 +44,13 @@ Future releases will support additional notebook environments, object stores and
 |                                           |* Uses Google Drive as Object Store                                |
 |                                           |* Requires Colab env setup for Google Drive                        |
 |                                           |* Development has stopped for this version                         |
+<<<<<<< HEAD
 =======
 |Notebook                                   |Notes
 |-------------------------------------------|-------------------------------------------------------------------|
 >>>>>>> docker-containers
+=======
+>>>>>>> 91813a64c22422f0a7e9a7847ea79eef10b091f3
 |CDISC_360i_Object_Store_Automation         |* Does not copy study artifacts to local filesystem, but works entirely with objects in Object Store    |
 |                                           |* Uses Google Drive as Object Store                                |
 |                                           |* Requires Colab env setup for Google Drive                        |
@@ -81,6 +84,21 @@ Future releases will support additional notebook environments, object stores and
     The custom distribution used in the notebooks is too large for GitHub.
 
     Ensure the new distribution is archived as core.tar.gz and stored as shown in the image above.
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 91813a64c22422f0a7e9a7847ea79eef10b091f3
 
 
 
