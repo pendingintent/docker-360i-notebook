@@ -30,27 +30,12 @@ All tables will be created in the PostgreSQL database in the *clinical-database*
 ## Google Colab Notebooks
 Currently, these notebooks are designed to execute in the [Google Colaboratory](https://colab.google.com/) environment.
 
-<<<<<<< HEAD
-Future releases will support additional notebook environments, object stores and databases.
 
 
 ## Description
 
-
-|Notebook                       |Notes
-|-------------------------------------------|-------------------------------------------------------------------|
-|CDISC_360i_Protocol_to_Submission          |* Shown at CDISC Interchange                                       |
-|                                           |* Copies study artifacts to local filesystem prior to copying to Object Store  |
-|                                           |* Uses Google Drive as Object Store                                |
-|                                           |* Requires Colab env setup for Google Drive                        |
-|                                           |* Development has stopped for this version                         |
-<<<<<<< HEAD
-=======
 |Notebook                                   |Notes
 |-------------------------------------------|-------------------------------------------------------------------|
->>>>>>> docker-containers
-=======
->>>>>>> 91813a64c22422f0a7e9a7847ea79eef10b091f3
 |CDISC_360i_Object_Store_Automation         |* Does not copy study artifacts to local filesystem, but works entirely with objects in Object Store    |
 |                                           |* Uses Google Drive as Object Store                                |
 |                                           |* Requires Colab env setup for Google Drive                        |
@@ -63,7 +48,6 @@ Future releases will support additional notebook environments, object stores and
 
 ## How To ##
 
-<<<<<<< HEAD
 1. Clone the repository or download a notebook
 2. Access [Google Colaboratory](https://colab.google.com/) using your Google account.
 3. Setup MyDrive to match URL requirements of notebook.  The directory structure in GooGle Drive should appear as:
@@ -73,7 +57,7 @@ Future releases will support additional notebook environments, object stores and
 
     This will ensure the code cells in the CDISC_360i_Protocol_to_Submission notebook.
 
-4. Copy the CDISC_360i_Protocol_to_Submission notebook to the myDrive/Colab Notebooks dirctory:
+4. Copy the CDISC_360i_Protocol_to_Submission notebook to the myDrive/Colab Notebooks directory:
 
     ![MyDrive/Colab Notebooks directory structure](images/ColabNotebooks.png)
 
@@ -84,37 +68,12 @@ Future releases will support additional notebook environments, object stores and
     The custom distribution used in the notebooks is too large for GitHub.
 
     Ensure the new distribution is archived as core.tar.gz and stored as shown in the image above.
-<<<<<<< HEAD
-=======
 
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 91813a64c22422f0a7e9a7847ea79eef10b091f3
-
-
-
-
-
-
-=======
-1. Login to your Google Colab environment
-2. Copy the *CDISC_360i_Object_Store_Automation.ipynb* notebook into the environment.
 
 **Notes:**
 1. The notebook relies upon access to your Google Drive.
 2. If you would like to access the OpenStudyBuilder API, you must supply a BEARER_TOKEN.
 3. The *core.tar.gz* used in the notebook is a distribution of the CORE engine built for the Google Colab environment as of October 2025.  Google Colab environment future updates may require the creation of a new distribution of the CORE engine (links are included in the notebook).
->>>>>>> docker-containers
-
 
 
 # Resources #
