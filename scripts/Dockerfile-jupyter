@@ -20,10 +20,6 @@ RUN set -eux; \
 	R --version; \ 
 	rm -rf /var/lib/apt/lists/*
 
-RUN ["apt", "update", "-y"]
-RUN ["apt", "install", "wget", "-y"]
-RUN ["apt", "install", "unzip", "-y"]
-
 COPY requirements.txt /tmp/requirements.txt
 
 RUN $VIRTUAL_ENV/bin/pip install -r /tmp/requirements.txt
