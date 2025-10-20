@@ -11,8 +11,26 @@ These notebooks automate study design using concepts and a standardized model to
 
 # Notebooks #
 
+## Dockerized Notebook
+
+This environment exists as two Docker containers; one hosting a PostgreSQL relational database and the other, the Jupyter notebook environment.
+
+### How-to
+
+1. Clone the repository 
+2. Change into the cloned directory.
+3. Execute `source initial-startup.sh`
+4. Open a browser to http://localhost:8888
+5. In the notebooks directory, open the *CDISC_360i_Jupyter_Protocol_to_Submission.ipynb* notebook.
+
+All CDISC utilities as well as the resources will be created in the notebooks directory in the *clinical-notebook* container.
+
+All tables will be created in the PostgreSQL database in the *clinical-database* container.
+
+## Google Colab Notebooks
 Currently, these notebooks are designed to execute in the [Google Colaboratory](https://colab.google.com/) environment.
 
+<<<<<<< HEAD
 Future releases will support additional notebook environments, object stores and databases.
 
 
@@ -26,14 +44,23 @@ Future releases will support additional notebook environments, object stores and
 |                                           |* Uses Google Drive as Object Store                                |
 |                                           |* Requires Colab env setup for Google Drive                        |
 |                                           |* Development has stopped for this version                         |
+=======
+|Notebook                                   |Notes
+|-------------------------------------------|-------------------------------------------------------------------|
+>>>>>>> docker-containers
 |CDISC_360i_Object_Store_Automation         |* Does not copy study artifacts to local filesystem, but works entirely with objects in Object Store    |
 |                                           |* Uses Google Drive as Object Store                                |
 |                                           |* Requires Colab env setup for Google Drive                        |
 |                                           |* Development will continue as new tools and features become available |
-
+|CDISC_360i_Protocol_to_Submission (deprecated)         |* Shown at CDISC Interchange                                       |
+|                                           |* Copies study artifacts to local filesystem prior to copying to Object Store  |
+|                                           |* Uses Google Drive as Object Store                                |
+|                                           |* Requires Colab env setup for Google Drive                        |
+|                                           |* Development has stopped for this version                         |
 
 ## How To ##
 
+<<<<<<< HEAD
 1. Clone the repository or download a notebook
 2. Access [Google Colaboratory](https://colab.google.com/) using your Google account.
 3. Setup MyDrive to match URL requirements of notebook.  The directory structure in GooGle Drive should appear as:
@@ -60,15 +87,19 @@ Future releases will support additional notebook environments, object stores and
 
 
 
+=======
+1. Login to your Google Colab environment
+2. Copy the *CDISC_360i_Object_Store_Automation.ipynb* notebook into the environment.
+
+**Notes:**
+1. The notebook relies upon access to your Google Drive.
+2. If you would like to access the OpenStudyBuilder API, you must supply a BEARER_TOKEN.
+3. The *core.tar.gz* used in the notebook is a distribution of the CORE engine built for the Google Colab environment as of October 2025.  Google Colab environment future updates may require the creation of a new distribution of the CORE engine (links are included in the notebook).
+>>>>>>> docker-containers
 
 
 
-
-
-
-
-
-## Resources ##
+# Resources #
 **Other GitHub projects used in the notebooks**
 
 |Project                            |GitHub Repository                                                                          |
