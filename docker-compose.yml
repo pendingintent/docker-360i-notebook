@@ -14,7 +14,7 @@ services:
       clinical-bridge:
         ipv4_address: 10.0.0.2
     volumes:
-      - db:/var/lib/postgresql/18/data
+      - db:/var/lib/postgresql/data
 
   jupyter:
     container_name: clinical-notebook
