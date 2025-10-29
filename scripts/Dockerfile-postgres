@@ -3,8 +3,9 @@ FROM postgres:18
 ADD ./init-db.sh /docker-entrypoint-initdb.d/
 
 RUN apt-get update && \
-    apt-get install -y wget git python3 pip python3-pandas python3-sqlalchemy python3-psycopg2 && \
+    apt-get install -y wget git python3 pip python3-pandas python3-sqlalchemy python3-psycopg2 python3-dotenv && \
     rm -rf /var/lib/apt/lists/*
+
 RUN git clone https://github.com/alidootson/UpdatedCDISCPilotData.git
 
 WORKDIR "/UpdatedCDISCPilotData/UpdatedCDISCPilotData/CDASH/csv versions"
