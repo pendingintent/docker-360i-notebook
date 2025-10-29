@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Setup the Database Container
 docker-compose up -d --force-recreate --build 
 sleep 10
