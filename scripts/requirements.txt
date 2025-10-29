@@ -1,19 +1,19 @@
 ## Minimal dependencies for the notebook container
 # Add/pin versions here as needed; keep concise to reduce image size.
-jupyterlab
-pandas
-sqlalchemy
-psycopg2-binary
-requests 
-cairosvg 
-validators 
-pathvalidate 
-saxonche 
-click 
-xmlschema 
-dominate 
-pygame 
-ipywidgets
-openpyxl
-lxml
-rpy2
+jupyterlab==4.1.6
+pandas==2.2.2
+sqlalchemy==2.0.30
+psycopg2-binary==2.9.9
+requests==2.31.0
+cairosvg==2.7.1
+validators==0.22.0
+pathvalidate==3.2.0
+saxonche==12.4.0
+click==8.1.7
+xmlschema==2.6.3
+dominate==2.8.0
+pygame==2.5.2
+ipywidgets==8.1.2
+openpyxl==3.1.2
+lxml==5.2.1
+rpy2==3.5.16
