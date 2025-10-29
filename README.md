@@ -17,9 +17,15 @@ This environment exists as two Docker containers; one hosting a PostgreSQL relat
 
 1. Clone the repository 
 2. Change into the root of the cloned directory.
-3. Execute `source initial-startup.sh`
-4. Open a browser to http://localhost:8888
-5. Navigate to the notebooks directory and open the *CDISC_360i_Jupyter_Protocol_to_Submission.ipynb* notebook.
+3. In the root of the cloned repository, create a .env text file.
+4. Enter the following in .env:
+
+    ![alt text](images/image.png)
+
+5. Enter custom values for the environmental variables and save the file changes.
+6. Execute `source initial-startup.sh`
+7. Open a browser to http://localhost:8888
+8. Navigate to the notebooks directory and open the *CDISC_360i_Jupyter_Protocol_to_Submission.ipynb* notebook.
 
 All CDISC utilities as well as the resources will be created in the notebooks directory in the *clinical-notebook* container.
 
