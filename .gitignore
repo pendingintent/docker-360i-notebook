@@ -4,7 +4,7 @@ venv/
 output/
 output_from_main/
 tmp*/
-working_dir/*
+working-dir
 #Jupyter directories sholud not be included in commit
 .ipynb_checkpoints
 .Trash-0
@@ -23,4 +23,5 @@ notebooks/360i
 notebooks/template2define
 *_from_sdtm_oak_codegen.csv
 *.R
-.DS_Store
+*.DS_Store
+src

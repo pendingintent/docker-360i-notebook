@@ -8,67 +8,57 @@ CDISC 360i defines a vision and roadmap to enable standards-driven automation ac
 
 These notebooks automate study design using concepts and a standardized model to build a digital protocol. Aligned Case Report Forms (CRFs) and SDTM resources will be automatically generated as downstream artifacts using metadata from the digital protocol.
 
-
 # Notebooks #
+## Dockerized Notebook
 
+This environment exists as two Docker containers; one hosting a PostgreSQL relational database and the other, the Jupyter notebook environment.
+
+### How-to
+
+1. Clone the repository 
+2. Change into the root of the cloned directory.
+3. In the root of the cloned repository, create a .env text file.
+4. Enter the following in .env:
+
+    ![Example .env file configuration with environment variables](images/image.png)
+
+5. Enter custom values for the environmental variables and save the file changes.
+6. Execute `source initial-startup.sh`
+7. Open a browser to http://localhost:8888
+8. Navigate to the notebooks directory and open the *CDISC_360i_Jupyter_Protocol_to_Submission.ipynb* notebook.
+
+All CDISC utilities as well as the resources will be created in the notebooks directory in the *clinical-notebook* container.
+
+All tables will be created in the PostgreSQL database in the *clinical-database* container.
+
+## Google Colab Notebooks
 Currently, these notebooks are designed to execute in the [Google Colaboratory](https://colab.google.com/) environment.
 
-Future releases will support additional notebook environments, object stores and databases.
-
-
-## Description
-
-
-|Notebook                       |Notes
+|Notebook                                   |Notes
 |-------------------------------------------|-------------------------------------------------------------------|
-|CDISC_360i_Protocol_to_Submission          |* Shown at CDISC Interchange                                       |
-|                                           |* Copies study artifacts to local filesystem prior to copying to Object Store  |
-|                                           |* Uses Google Drive as Object Store                                |
-|                                           |* Requires Colab env setup for Google Drive                        |
-|                                           |* Development has stopped for this version                         |
 |CDISC_360i_Object_Store_Automation         |* Does not copy study artifacts to local filesystem, but works entirely with objects in Object Store    |
 |                                           |* Uses Google Drive as Object Store                                |
 |                                           |* Requires Colab env setup for Google Drive                        |
 |                                           |* Development will continue as new tools and features become available |
-
+|CDISC_360i_Protocol_to_Submission (deprecated)         |* Shown at CDISC Interchange                                       |
+|                                           |* Copies study artifacts to local filesystem prior to copying to Object Store  |
+|                                           |* Uses Google Drive as Object Store                                |
+|                                           |* Requires Colab env setup for Google Drive                        |
+|                                           |* Development has stopped for this version                         |
 
 ## How To ##
 
-1. Clone the repository or download a notebook
-2. Access [Google Colaboratory](https://colab.google.com/) using your Google account.
-3. Setup MyDrive to match URL requirements of notebook.  The directory structure in GooGle Drive should appear as:
+1. Login to your Google Colab environment
+2. Copy the *CDISC_360i_Object_Store_Automation.ipynb* notebook into the environment.
 
-
-    ![MyDrive/resources/ directory structure](images/resources.png)
-
-    This will ensure the code cells in the CDISC_360i_Protocol_to_Submission notebook.
-
-4. Copy the CDISC_360i_Protocol_to_Submission notebook to the myDrive/Colab Notebooks dirctory:
-
-    ![MyDrive/Colab Notebooks directory structure](images/ColabNotebooks.png)
-
-5. A custom distribution of the CDISC CORE Rules Engine will be required for execution of CORE Validation Rules in the notebooks.  This distribution will need to be built for the system hosting the notebooks.  Instructions are available here:
-
-    https://github.com/cdisc-org/cdisc-rules-engine/blob/main/README_Build_Executable.md
-
-    The custom distribution used in the notebooks is too large for GitHub.
-
-    Ensure the new distribution is archived as core.tar.gz and stored as shown in the image above.
+**Notes:**
+1. The notebook relies upon access to your Google Drive.
+2. If you would like to access the OpenStudyBuilder API, you must supply a BEARER_TOKEN.
+3. The *core.tar.gz* used in the notebook is a distribution of the CORE engine built for the Google Colab environment as of October 2025.  Google Colab environment future updates may require the creation of a new distribution of the CORE engine (links are included in the notebook).
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-## Resources ##
+# Resources #
 **Other GitHub projects used in the notebooks**
 
 |Project                            |GitHub Repository                                                                          |

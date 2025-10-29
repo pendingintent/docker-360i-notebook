@@ -1,0 +1,28 @@
+FROM ubuntu:24.04
+
+ENV DEBIAN_FRONTEND=noninteractive PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 VIRTUAL_ENV=/opt/venv
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+
+RUN apt-get update \
+	&& apt-get install -y --no-install-recommends python3.12 python3.12-venv python3.12-dev curl gpg git wget unzip libxml2-utils libxml2-dev \
+	&& python3.12 -m venv $VIRTUAL_ENV 
+
+RUN set -eux; \
+	apt-get update; \ 
+	mkdir -p /usr/share/keyrings; \ 
+	curl -fsSL https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | gpg --dearmor -o /usr/share/keyrings/cran-archive-keyring.gpg; \ 
+	echo "deb [signed-by=/usr/share/keyrings/cran-archive-keyring.gpg] https://cloud.r-project.org/bin/linux/ubuntu noble-cran40/" > /etc/apt/sources.list.d/cran-r.list; \ 
+	apt-get update; \ 
+	apt-get install -y --no-install-recommends r-base r-base-dev; \ 
+	R --version; \ 
+	rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt /tmp/requirements.txt
+
+RUN $VIRTUAL_ENV/bin/pip install -r /tmp/requirements.txt
+
+WORKDIR /workspace
+
+EXPOSE 8888
+
+CMD ["jupyter-lab", "--ip=0.0.0.0", "--no-browser", "--allow-root", "--NotebookApp.token=", "--NotebookApp.password="]
