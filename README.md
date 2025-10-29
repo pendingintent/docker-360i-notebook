@@ -20,7 +20,7 @@ This environment exists as two Docker containers; one hosting a PostgreSQL relat
 3. In the root of the cloned repository, create a .env text file.
 4. Enter the following in .env:
 
-    ![alt text](images/image.png)
+    ![Example .env file configuration with environment variables](images/image.png)
 
 5. Enter custom values for the environmental variables and save the file changes.
 6. Execute `source initial-startup.sh`
