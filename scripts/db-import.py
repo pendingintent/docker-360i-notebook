@@ -16,8 +16,7 @@ print("DEBUG: database_password = {}".format(database_password))
 
 conn_string = f"postgresql://{database_user}:{database_password}@postgres/{database_db}"
 
-# db = create_engine(conn_string)
-db = create_engine("postgresql://clinops:changeme@postgres/clinops")
+db = create_engine(conn_string)
 
 # the folder containing the CSV files
 path = "."
