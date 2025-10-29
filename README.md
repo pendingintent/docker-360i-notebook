@@ -15,17 +15,25 @@ This environment exists as two Docker containers; one hosting a PostgreSQL relat
 
 ### How-to
 
-1. Clone the repository 
-2. Change into the root of the cloned directory.
-3. In the root of the cloned repository, create a .env text file.
-4. Enter the following in .env:
+#### Setup Environment
+
+1. Navigate to https://github.com/git-guides/install-git to install the latest git distribution for your platform.
+2. Navigate to https://www.docker.com/ to Download Docker Desktop.  This will include all binaries that are required to run Docker containers on your chosen platform.
+3. Start Docker Desktop on your platfrom.
+4. Clone this repository to the desired directory.
+
+#### Use notebook
+
+1. Change into the root of the cloned directory.
+2. In the root of the cloned repository, create a .env text file.
+3. Enter the following in .env:
 
     ![Example .env file configuration with environment variables](images/image.png)
 
-5. Enter custom values for the environmental variables and save the file changes.
-6. Execute `source initial-startup.sh`
-7. Open a browser to http://localhost:8888
-8. Navigate to the notebooks directory and open the *CDISC_360i_Jupyter_Protocol_to_Submission.ipynb* notebook.
+4. Enter custom values for the environmental variables and save the file changes.
+5. Execute `source initial-startup.sh`
+6. Open a browser to http://localhost:8888
+7. Navigate to the notebooks directory and open the *CDISC_360i_Jupyter_Protocol_to_Submission.ipynb* notebook.
 
 All CDISC utilities as well as the resources will be created in the notebooks directory in the *clinical-notebook* container.
 
