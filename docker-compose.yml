@@ -21,8 +21,8 @@ services:
     depends_on:
       - postgres
     build:
-      context: ./scripts
-      dockerfile: Dockerfile-jupyter
+      context: .
+      dockerfile: scripts/Dockerfile-jupyter
     platform: "linux/amd64"
     ports:
       - "8888:8888"
