@@ -24,3 +24,4 @@ notebooks/template2define
 *_from_sdtm_oak_codegen.csv
 *.DS_Store
 src
+*-tests.ipynb
