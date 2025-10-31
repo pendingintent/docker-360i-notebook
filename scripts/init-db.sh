@@ -12,7 +12,7 @@ psql -v ON_ERROR_STOP=1 \
     -v clinops_db="$CLINOPS_DB" \
     -v clinops_password="$CLINOPS_PASSWORD" \
     --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-EOSQL
-    CREATE USER IF NOT EXISTS :"clinops_user";
+    CREATE USER :"clinops_user";
     GRANT ALL PRIVILEGES ON DATABASE :"clinops_db" TO :"clinops_user";
     ALTER DATABASE :"clinops_db" OWNER TO :"clinops_user";
     ALTER USER :"clinops_user" WITH PASSWORD :'clinops_password';
