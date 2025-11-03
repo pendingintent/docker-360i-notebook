@@ -27,6 +27,10 @@ WORKDIR /workspace
 
 COPY r-scripts /workspace/r-scripts
 
+COPY files /workspace/files
+
+COPY .env.template /workspace/.env
+
 EXPOSE 8888
 
 CMD ["jupyter-lab", "--ip=0.0.0.0", "--no-browser", "--allow-root", "--NotebookApp.token=", "--NotebookApp.password="]
