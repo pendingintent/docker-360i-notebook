@@ -25,15 +25,15 @@ This environment exists as two Docker containers; one hosting a PostgreSQL relat
 #### Use notebook
 
 1. Change into the root of the cloned directory.
-2. In the root of the cloned repository, create a .env text file.
-3. Enter the following in .env:
+2. Populate the file .env.template for the variables in the file.
 
-    ![Example .env file configuration with environment variables](images/image.png)
+    **Note<sup>1</sup>: The OSB_BEARER_TOKEN value is only required if running the OSB-specific API calls included in the Notebook**
 
-4. Enter custom values for the environmental variables and save the file changes.
-5. Execute `source initial-startup.sh`
-6. Open a browser to http://localhost:8888
-7. Navigate to the notebooks directory and open the *CDISC_360i_Jupyter_Protocol_to_Submission.ipynb* notebook.
+    **Note<sup>2</sup>: The CDISC_API_KEY value is required to run the generation of the LB domain**
+
+4. Execute `source initial-startup.sh`
+5. Open a browser to http://localhost:8888
+6. Navigate to the notebooks directory and open the *CDISC_360i_Jupyter_Protocol_to_Submission.ipynb* notebook.
 
 All CDISC utilities as well as the resources will be created in the notebooks directory in the *clinical-notebook* container.
 
