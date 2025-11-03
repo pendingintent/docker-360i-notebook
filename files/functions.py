@@ -133,7 +133,7 @@ def create_blank_df(sdtm_domain: str) -> pd.DataFrame:
 
 
 def get_study_id() -> str:
-    fhir_path_query
+    raise NotImplementedError("get_study_id is not yet implemented. Please provide the required logic.")
 
 
 def get_dataset_by_vlm_id(
