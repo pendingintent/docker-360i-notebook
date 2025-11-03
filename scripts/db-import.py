@@ -10,9 +10,9 @@ database_db = os.getenv("CLINOPS_DB")
 database_user = os.getenv("CLINOPS_USER")
 database_password = os.getenv("CLINOPS_PASSWORD")
 
-print("DEBUG: database_db = {}".format(database_db))
-print("DEBUG: database_user = {}".format(database_user))
-print("DEBUG: database_password = {}".format(database_password))
+# print("DEBUG: database_db = {}".format(database_db))
+# print("DEBUG: database_user = {}".format(database_user))
+# print("DEBUG: database_password = {}".format(database_password))
 
 conn_string = f"postgresql://{database_user}:{database_password}@postgres/{database_db}"
 
@@ -43,6 +43,8 @@ try:
 except Exception as e:
     # Redact password in connection string for error message
     redacted_conn_string = f"postgresql://{database_user}:***@postgres/{database_db}"
-    print(f"ERROR: Failed to connect to the database using connection string: {redacted_conn_string}")
+    print(
+        f"ERROR: Failed to connect to the database using connection string: {redacted_conn_string}"
+    )
     print(f"Exception: {e}")
     exit(1)
