@@ -67,8 +67,8 @@ def fhir_path_query(data, fhir_path: str):
     return list(map(str, result))
 
 
-def get_test_from_sdtm_terminology(codelist_code: str, iteme_code: str) -> str:
-    endpoint_url = f"https://api.library.cdisc.org/api/mdr/ct/packages/sdtmct-2025-03-28/codelists/{codelist_code}/terms/{iteme_code}"
+def get_test_from_sdtm_terminology(codelist_code: str, item_code: str) -> str:
+    endpoint_url = f"https://api.library.cdisc.org/api/mdr/ct/packages/sdtmct-2025-03-28/codelists/{codelist_code}/terms/{item_code}"
 
     headers = {
         "api-key": os.getenv("CDISC_API_KEY"),
@@ -133,7 +133,7 @@ def create_blank_df(sdtm_domain: str) -> pd.DataFrame:
 
 
 def get_study_id() -> str:
-    fhir_path_query
+    raise NotImplementedError("get_study_id is not yet implemented. Please provide the required logic.")
 
 
 def get_dataset_by_vlm_id(
