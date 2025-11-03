@@ -17,3 +17,5 @@ ipywidgets
 openpyxl
 lxml
 rpy2
+fhirpathpy
+dotenv
