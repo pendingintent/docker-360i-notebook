@@ -67,8 +67,8 @@ def fhir_path_query(data, fhir_path: str):
     return list(map(str, result))
 
 
-def get_test_from_sdtm_terminology(codelist_code: str, iteme_code: str) -> str:
-    endpoint_url = f"https://api.library.cdisc.org/api/mdr/ct/packages/sdtmct-2025-03-28/codelists/{codelist_code}/terms/{iteme_code}"
+def get_test_from_sdtm_terminology(codelist_code: str, item_code: str) -> str:
+    endpoint_url = f"https://api.library.cdisc.org/api/mdr/ct/packages/sdtmct-2025-03-28/codelists/{codelist_code}/terms/{item_code}"
 
     headers = {
         "api-key": os.getenv("CDISC_API_KEY"),
